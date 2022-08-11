@@ -1,0 +1,27 @@
+body,#jogo-da-velha,#primeira-linha,#segunda-linha,#terceira-linha{
+    display: flex;
+}
+
+body,#jogo-da-velha,#primeira-linha,#segunda-linha,#terceira-linha{
+    background-color: darkcyan;
+    align-items: center;
+    justify-content: center;
+}
+
+#jogo-da-velha{
+    flex-direction: column;
+    background-color: orange;
+    height: 50%;
+    width: 35%;
+}
+
+#primeira-linha,#segunda-linha,#terceira-linha{
+    flex-direction: row;
+    width: 100%;
+    height: 33%;
+}
+
+input{
+    height: 100%;
+    width: 50%;
+}
