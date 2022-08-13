@@ -1,37 +1,36 @@
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Jogo da Velha </title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
 
-    <body>
-        
-        <div id="jogo-da-velha">
-            <div id="primeira-linha">
-                <input type="submit" value="" id="1" onclick="inserirCaracter(0)">
-                <input type="submit" value="" id="2" onclick="inserirCaracter(1)">
-                <input type="submit" value="" id="3" onclick="inserirCaracter(2)">
-            </div>
-            <div id="segunda-linha">
-                <input type="submit" value="" id="4" onclick="inserirCaracter(3)">
-                <input type="submit" value="" id="5" onclick="inserirCaracter(4)">
-                <input type="submit" value="" id="6" onclick="inserirCaracter(5)">
-            </div>
-            <div id="terceira-linha">
-                <input type="submit" value="" id="7" onclick="inserirCaracter(6)">
-                <input type="submit" value="" id="8" onclick="inserirCaracter(7)">
-                <input type="submit" value="" id="9" onclick="inserirCaracter(8)">
-            </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Jogo da Velha </title>
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-        <div>
-            <p id="mensagem-de-resultado"> </p>
-        </div>
+<body>
 
-        <script src="./script.js"></script>
-    </body>
+  <div id="jogo-da-velha">
+    <div id="primeira-linha">
+      <input type="submit" value="" id="0">
+      <input type="submit" value="" id="1">
+      <input type="submit" value="" id="2">
+    </div>
+    <div id="segunda-linha">
+      <input type="submit" value="" id="3">
+      <input type="submit" value="" id="4">
+      <input type="submit" value="" id="5">
+    </div>
+    <div id="terceira-linha">
+      <input type="submit" value="" id="6">
+      <input type="submit" value="" id="7">
+      <input type="submit" value="" id="8">
+    </div>
+    <div id="texto-vencedor">
+      <h2 id="mensagem-de-resultado"> </h2>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
