@@ -64,7 +64,20 @@ function verificarLinhas() {
 }
 
 function verificarColunas() {
-
+  var contarCaracteresIguaisX = 0;
+  var contarCaracteresIguaisO = 0;
+  for (var i = 0; i < digitos.length; i++) {
+    for (var j = 0; j < digitos.length; j++) {
+      if (digitos[j][i].value == arrayX[i]) {
+        contarCaracteresIguaisX += 1;
+      } else if (digitos[j][i].value == arrayO[i]) {
+        contarCaracteresIguaisO += 1;
+      }
+    }
+    contarCaracteresIguais(contarCaracteresIguaisX, contarCaracteresIguaisO);
+    contarCaracteresIguaisX = 0;
+    contarCaracteresIguaisO = 0;
+  }
 }
 
 function verificarDiagonalPrincipal() {
