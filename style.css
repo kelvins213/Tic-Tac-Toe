@@ -3,21 +3,28 @@
   padding: 0%;
 }
 
-body,#jogo-da-velha,#primeira-linha,#segunda-linha,#terceira-linha, #texto-vencedor{
+body,#jogo-da-velha,#primeira-linha,#segunda-linha,#terceira-linha, #texto-vencedor, #titulo{
     display: flex;
 }
 
-body,#jogo-da-velha,#primeira-linha,#segunda-linha,#terceira-linha,#texto-vencedor{
+body,#jogo-da-velha,#primeira-linha,#segunda-linha,#terceira-linha,#texto-vencedor,#titulo{
     background-color: darkcyan;
     align-items: center;
     justify-content: center;
 }
 
-#texto-vencedor{
+#titulo, #texto-vencedor{
   position: relative;
-  top: 5%;
   height: 15%;
   width: 100%;
+}
+
+#texto-vencedor{
+  top: 5%;
+}
+
+#titulo{
+  bottom: 5%;
 }
 
 #jogo-da-velha{
