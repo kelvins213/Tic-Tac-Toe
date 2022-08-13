@@ -48,7 +48,6 @@ function inserirCaracter(linha, coluna) {
   }
 }
 
-//está funcionando!
 function verificarLinhas() {
   for (var i = 0; i < digitos.length; i++) {
     var contarCaracteresIguaisX = 0;
@@ -60,11 +59,7 @@ function verificarLinhas() {
         contarCaracteresIguaisO += 1;
       }
     });
-    if (contarCaracteresIguaisX == digitos.length) {
-      imprimirVencedor("X");
-    } else if (contarCaracteresIguaisO == digitos.length) {
-      imprimirVencedor("O");
-    }
+    contarCaracteresIguais(contarCaracteresIguaisX, contarCaracteresIguaisO);
   }
 }
 
@@ -73,18 +68,47 @@ function verificarColunas() {
 }
 
 function verificarDiagonalPrincipal() {
-
+  var contarCaracteresIguaisX = 0;
+  var contarCaracteresIguaisO = 0;
+  for (var i = 0; i < digitos.length; i++) {
+    if (digitos[i][i].value == arrayX[i]) {
+      contarCaracteresIguaisX += 1;
+    } else if (digitos[i][i].value == arrayO[i]) {
+      contarCaracteresIguaisO += 1;
+    }
+  }
+  contarCaracteresIguais(contarCaracteresIguaisX, contarCaracteresIguaisO);
 }
 
 function verificarDiagonalSecundaria() {
+  var contarCaracteresIguaisX = 0;
+  var contarCaracteresIguaisO = 0;
+  var j = 2
+  for (var i = 0; i < digitos.length; i++) {
+    if (digitos[i][j].value == arrayX[i]) {
+      contarCaracteresIguaisX += 1;
+    } else if (digitos[i][j].value == arrayO[i]) {
+      contarCaracteresIguaisO += 1;
+    }
+    j--;
+  }
+  contarCaracteresIguais(contarCaracteresIguaisX, contarCaracteresIguaisO)
+}
 
+function contarCaracteresIguais(contarCaracteresIguaisX, contarCaracteresIguaisO) {
+  if (contarCaracteresIguaisX == digitos.length) {
+    imprimirVencedor("X");
+  } else if (contarCaracteresIguaisO == digitos.length) {
+    imprimirVencedor("O");
+  }
 }
 
 function imprimirVencedor(winner) {
-  document.getElementById("mensagem-de-resultado").textContent = winner + " foi o vencedor!";
-  //desativar os botões
+  document.getElementById("mensagem-de-resultado").textContent = "o jogador " + winner + " foi o vencedor!";
   for (var i = 0; i < digitos.length; i++) {
-    digitos[i].forEach(() => { });
+    for (var j = 0; j < digitos.length; j++) {
+      digitos[i][j].setAttribute('disabled', 'disabled');
+    }
   }
 }
 
